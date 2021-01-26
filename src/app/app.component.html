@@ -1,5 +1,10 @@
-<app-header></app-header>
+<app-header [title]="title"></app-header>
 
-<app-home></app-home>
+<!--- <app-home></app-home> --->
+
+<app-databind-exercise 
+    [word]="pudim" 
+    (clicked)="recievedEvent($event)"
+></app-databind-exercise>
 
 <app-footer></app-footer>

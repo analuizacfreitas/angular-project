@@ -1,0 +1,42 @@
+Valor atual de counterValue: {{ counterValue }}
+
+<!-- EXERCÍCIO CONTADOR -->
+
+<app-counter
+    [(value)]="counterValue"
+></app-counter>
+
+<hr>
+
+<!-- EXEMPLOS DE EVENT BINDING: -->
+
+<button (click)="onClickEmitterButton($event)">
+    Emitir informação de clique
+</button><br><br>
+
+<button 
+    (click)="onClick($event)" 
+    (mouseenter)="mousePassed()">
+    Clique em mim!
+</button><br><br>
+
+<input type="text" 
+    [value]="inputValue" 
+    (keyup)="wroteSomething($event)">
+
+Valor do Input: {{ inputValue }}
+
+<hr>
+
+<!-- EXEMPLOS DE PROPERTY BINDING: -->
+
+<p>Palavra: {{ word }} </p>
+
+<input type="text" [value]="initialValue"><br>
+
+<button [disabled]="isDisabled">Clique em mim</button><br>
+
+<p [attr.aria-label]="isDisabled ? 'Botão desabilitado' : accessibilityText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae eius voluptates, ratione illum quidem, earum vitae deleniti quasi eveniet delectus! Blanditiis in nam excepturi. Quia dolor alias sequi accusamus?</p><br>
+
+<img [src]="imageURL">
+

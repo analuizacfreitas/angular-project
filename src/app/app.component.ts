@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  pudim = "do tipo string";
+  title = "Seja bem vindo! :)";
+
+  constructor() { }
+  
+  recievedEvent($event) {
+    console.log("AppComponent: EVENTO RECEBIDO!", $event);
+  }
+
 }
