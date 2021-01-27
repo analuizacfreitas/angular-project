@@ -1,0 +1,58 @@
+<p>Valor atual dentro de mostShow: {{ mostShow }}</p>
+
+<button (click)="changeValue()">Trocar valor</button>
+
+<div *ngIf="mostShow; else elseBlock">
+    <p>Olá! Estou dentro do ngIf.</p>
+</div>
+
+<ng-template #elseBlock>
+    <p>Bloco exibido quando mostShow for false!</p>
+</ng-template>
+
+<div *ngIf="sum(5, 6) > 10">
+    Esta soma tem como resultado um valor maior que 10 - exibe baseado na soma.
+</div><br>
+
+<!-- FORMA EXTENDIDA 
+<ng-template [ngIf]="mostShow">
+    <div>Content to render when condition is true.</div>
+</ng-template> -->
+
+<div *ngIf="mostShow; then thenBlock else elseBlock2"></div>
+<ng-template #thenBlock>Bloco true</ng-template>
+<ng-template #elseBlock2>Bloco false</ng-template>
+
+<hr>
+
+<ul>
+    <li *ngFor="let fruit of fruitList"> {{ fruit }} </li>
+</ul>
+
+<h3> List of movies that I like: </h3>
+<ul>
+    <li *ngFor="let movie of movieList; let index = index"> {{index +1}}- {{ movie.name }} ({{ movie.year }})</li>
+</ul>
+
+<!-- index as i -->
+
+<hr>
+
+<h2>Resolução do Exercício</h2>
+
+<ul>
+    <li *ngFor="let groupedMemes of MEMES_AGRUPADOS_POR_CATEGORIA">
+        <h2>{{ groupedMemes.categoria }}</h2>
+
+        <div *ngFor="let meme of groupedMemes.memes; let even = even">
+            <img [src]="IMAGE_URL + meme.imagemURL" *ngIf="even; else blocoEven">
+            <ng-template #blocoEven>
+                <h2>Bloco PAR (não exibido)</h2>
+            </ng-template>
+        </div>
+
+    </li>
+</ul>
+
+
+<br><br><br><br>

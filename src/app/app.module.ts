@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { DatabindExerciseComponent } from './databind-exercise/databind-exercise.component';
 import { CounterComponent } from './counter/counter.component';
+import { DirectivesExerciseComponent } from './directives-exercise/directives-exercise.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CounterComponent } from './counter/counter.component';
     FooterComponent,
     DatabindExerciseComponent,
     CounterComponent,
+    DirectivesExerciseComponent,
   ],
   imports: [
     BrowserModule,
