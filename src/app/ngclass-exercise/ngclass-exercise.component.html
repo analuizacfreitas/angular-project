@@ -1,0 +1,19 @@
+<button (click)="makeItGreen()">
+    Tornar verde
+</button>
+
+<strong><p [ngClass]="mustBeGreen ? 'green' : 'red'">Testando</p></strong>
+
+
+<strong><p [ngClass]="{
+    green: mustBeGreen,
+    'red': !mustBeGreen
+}">Outro teste</p></strong>
+
+<p [class]="mustBeGreen ? 'green' : 'red'">
+    PropertyBinding Class
+</p>
+
+<p [class.green]="mustBeGreen">
+    PropertyBinding Class
+</p>

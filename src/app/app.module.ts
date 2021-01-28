@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DatabindExerciseComponent } from './databind-exercise/databind-exercise.component';
 import { CounterComponent } from './counter/counter.component';
 import { DirectivesExerciseComponent } from './directives-exercise/directives-exercise.component';
+import { NgclassExerciseComponent } from './ngclass-exercise/ngclass-exercise.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DirectivesExerciseComponent } from './directives-exercise/directives-ex
     DatabindExerciseComponent,
     CounterComponent,
     DirectivesExerciseComponent,
+    NgclassExerciseComponent,
   ],
   imports: [
     BrowserModule,
